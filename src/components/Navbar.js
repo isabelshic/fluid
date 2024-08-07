@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaCaretDown, FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../assets/nasa-logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState('');
@@ -17,16 +17,28 @@ const Navbar = () => {
   return (
     <nav className="bg-black pt-6 pb-2 border-b border-white z-50 relative">
       <div className="container mx-auto flex justify-between items-center">
+        
+        {/* LOGO */}
         <div className="flex items-center">
-          <img src={logo} alt="NASA Logo" className="h-10 mr-3" />
+          <Link to='/'>
+            <img src={`${process.env.PUBLIC_URL}/assets/nasa-logo.png`} alt="NASA Logo" className="h-10 mr-3" />
+          </Link>
         </div>
+
+        {/* MOBILE */}
         <div className="md:hidden">
           <button onClick={toggleMobileMenu} className="text-white">
             {mobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
+
+        {/* NAVIGATION LINKS */}
         <ul className={`md:flex md:space-x-6 text-white font-helvetica text-sm ${mobileMenuOpen ? 'block' : 'hidden'}`}>
-          <li><a href="#" className="hover:text-blue-400 block md:inline-block">Home</a></li>
+          
+          {/* Home */}
+          <li><a href="/" className="hover:text-blue-400 block md:inline-block">Home</a></li>
+          
+          {/* Weather Forecasts */}
           <li className="relative">
             <button onClick={() => toggleDropdown('weather')} className="flex items-center hover:text-blue-400 w-full md:w-auto">
               Weather Forecasts <FaCaretDown className="ml-1" />
@@ -41,6 +53,8 @@ const Navbar = () => {
               </ul>
             )}
           </li>
+          
+          {/* Aerosol & Gas Forecasts */}
           <li className="relative">
             <button onClick={() => toggleDropdown('aerosol')} className="flex items-center hover:text-blue-400 w-full md:w-auto">
               Aerosol & Gas Forecasts <FaCaretDown className="ml-1" />
@@ -57,7 +71,11 @@ const Navbar = () => {
               </ul>
             )}
           </li>
+
+          {/* Seasonal Prediction */}
           <li><a href="#" className="hover:text-blue-400 block md:inline-block">Seasonal Prediction</a></li>
+          
+          {/* Reanalysis */}
           <li className="relative">
             <button onClick={() => toggleDropdown('reanalysis')} className="flex items-center hover:text-blue-400 w-full md:w-auto">
               Reanalysis <FaCaretDown className="ml-1" />
@@ -75,6 +93,8 @@ const Navbar = () => {
               </ul>
             )}
           </li>
+
+          {/* Mission Support */}
           <li className="relative">
             <button onClick={() => toggleDropdown('mission')} className="flex items-center hover:text-blue-400 w-full md:w-auto">
               Mission Support <FaCaretDown className="ml-1" />
@@ -113,6 +133,7 @@ const Navbar = () => {
               </ul>
             )}
           </li>
+
         </ul>
       </div>
     </nav>
