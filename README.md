@@ -1,3 +1,5 @@
+![Fluid from Figma](https://github.com/user-attachments/assets/7578e8c6-afbc-479a-8526-3a5593fbd3cc)
+
 # FLUID Project
 
 Welcome to the FLUID project repository. This project is developed under NASA Goddard's GEOS tool called FLUID.
