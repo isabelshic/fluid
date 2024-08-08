@@ -94,20 +94,4 @@ We welcome contributions from the community. To contribute to the FLUID project,
    ```
 
 6. **Create a pull request:**
-   Go to the original repository and create a pull request from your forked repository.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-
-For any questions or inquiries, please contact:
-
-- **Isabel Shic**
-  - Email: [your.email@example.com](mailto:your.email@example.com)
-  - GitHub: [isabelshic](https://github.com/isabelshic)
-
----
-
-Feel free to customize this README template based on the specific details of your project. If you have any other questions or need further assistance, let me know!
+   Go to the original repository and create a pull request from your forked repository
