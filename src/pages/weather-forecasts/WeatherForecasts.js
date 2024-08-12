@@ -9,7 +9,23 @@ const Home = () => {
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/weather-forecasts/datagrams'
+    },
+    {
+      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
+      title: 'Observing System Statistics',
+      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
+      items: [
+      ],
+      link: '/weather-forecasts/observing-system-statistics'
+    },
+    {
+      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
+      title: 'Radiance Monitoring',
+      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
+      items: [
+      ],
+      link: '/weather-forecasts/radiance-monitoring'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
@@ -19,30 +35,7 @@ const Home = () => {
       ],
       link: '/weather-forecasts/weather-maps'
     },
-    {
-      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Seasonal Prediction',
-      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
-      items: [
-      ],
-      link: '/weather-forecasts/weather-maps'
-    },
-    {
-      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Reanalysis',
-      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
-      items: [
-      ],
-      link: '/weather-forecasts/weather-maps'
-    },
-    {
-      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Mission Support',
-      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
-      items: [
-      ],
-      link: '/weather-forecasts/weather-maps'
-    },
+    
   ];
 
   const backgroundImage = `${process.env.PUBLIC_URL}/assets/hero-background.png`;
