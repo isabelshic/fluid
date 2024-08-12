@@ -1,4 +1,4 @@
-![Fluid from Figma](https://github.com/user-attachments/assets/7578e8c6-afbc-479a-8526-3a5593fbd3cc)
+![Fluid from Figma (1)](https://github.com/user-attachments/assets/4e422bc0-510b-4de4-98ae-317e6ff34979)
 
 # FLUID Project
 
@@ -16,7 +16,7 @@ Welcome to the FLUID project repository. This project is developed under NASA Go
 
 ## Introduction
 
-FLUID (Flexible User Interface Design) is a tool designed to enhance the user experience of NASA Goddard's GEOS system. This project aims to provide an intuitive and user-friendly interface for managing and visualizing geophysical data.
+FLUID (Framework for Live User-Invoked Data) is a tool designed to enhance the user experience of NASA Goddard's GEOS system. This project aims to provide an intuitive and user-friendly interface for managing and visualizing geophysical data.
 
 ## Features
 
