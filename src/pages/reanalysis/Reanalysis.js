@@ -5,11 +5,27 @@ const Home = () => {
   const graphData = [
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Datagrams',
+      title: 'Anomalies',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/reanalysis/anomalies'
+    },
+    {
+      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
+      title: 'Chem Maps',
+      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
+      items: [
+      ],
+      link: '/reanalysis/chem-maps'
+    },
+    {
+      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
+      title: 'Climate Statistics',
+      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
+      items: [
+      ],
+      link: '/reanalysis/climate-statistics'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
@@ -17,31 +33,7 @@ const Home = () => {
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
-    },
-    {
-      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Seasonal Prediction',
-      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
-      items: [
-      ],
-      link: '/weather-forecasts/weather-maps'
-    },
-    {
-      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Reanalysis',
-      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
-      items: [
-      ],
-      link: '/weather-forecasts/weather-maps'
-    },
-    {
-      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Mission Support',
-      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
-      items: [
-      ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/reanalysis/weather-maps'
     },
   ];
 
@@ -55,7 +47,7 @@ const Home = () => {
         <nav className="mb-4">
           <a href="/" className="text-blue-600 underline">&lt; Home</a>
         </nav>
-        <h2 className="text-2xl font-bold mb-4">Weather Analyses and Forecasts</h2>
+        <h2 className="text-2xl font-bold mb-4">Reanalysis</h2>
         <p className="text-lg mb-8 max-w-3xl">
           The Goddard Earth Observing System (GEOS) model is designed to study various Earth Science questions by connecting different model components flexibly.
         </p>

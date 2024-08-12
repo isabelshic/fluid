@@ -35,13 +35,16 @@ const Navbar = () => {
         {/* NAVIGATION LINKS */}
         <ul className={`md:flex md:space-x-6 text-white font-helvetica text-sm ${mobileMenuOpen ? 'block' : 'hidden'}`}>
           
-          {/* Home */}
-          <li><a href="/" className="hover:text-blue-400 block md:inline-block">Home</a></li>
-          
           {/* Weather Forecasts */}
           <li className="relative">
-            <button onClick={() => toggleDropdown('weather')} className="flex items-center hover:text-blue-400 w-full md:w-auto">
-              Weather Forecasts <FaCaretDown className="ml-1" />
+            <button 
+              onClick={() => toggleDropdown('weather')}
+              className="flex items-center hover:text-blue-400 w-full md:w-auto"
+            >
+              <Link to="/weather-forecasts" className="flex items-center w-full">
+                Weather Maps
+              </Link>
+              <FaCaretDown className="ml-1" />
             </button>
             {openDropdown === 'weather' && (
               <ul className="bg-black mt-1 p-4 space-y-2 w-full md:w-52 md:absolute md:bg-black md:p-4 md:space-y-2">
@@ -56,8 +59,14 @@ const Navbar = () => {
           
           {/* Aerosol & Gas Forecasts */}
           <li className="relative">
-            <button onClick={() => toggleDropdown('aerosol')} className="flex items-center hover:text-blue-400 w-full md:w-auto">
-              Aerosol & Gas Forecasts <FaCaretDown className="ml-1" />
+            <button 
+              onClick={() => toggleDropdown('aerosol')}
+              className="flex items-center hover:text-blue-400 w-full md:w-auto"
+            >
+              <Link to="/aerosol-gas" className="flex items-center w-full">
+                Aerosol & Gas Forecasts
+              </Link>
+              <FaCaretDown className="ml-1" />
             </button>
             {openDropdown === 'aerosol' && (
               <ul className="bg-black mt-1 p-4 space-y-2 w-full md:w-64 md:absolute md:bg-black md:p-4 md:space-y-2">
@@ -73,12 +82,22 @@ const Navbar = () => {
           </li>
 
           {/* Seasonal Prediction */}
-          <li><a href="#" className="hover:text-blue-400 block md:inline-block">Seasonal Prediction</a></li>
+          <li>
+            <Link to="/seasonal-prediction" className="hover:text-blue-400 block md:inline-block">
+              Seasonal Prediction
+            </Link>
+          </li>
           
           {/* Reanalysis */}
           <li className="relative">
-            <button onClick={() => toggleDropdown('reanalysis')} className="flex items-center hover:text-blue-400 w-full md:w-auto">
-              Reanalysis <FaCaretDown className="ml-1" />
+            <button 
+              onClick={() => toggleDropdown('reanalysis')}
+              className="flex items-center hover:text-blue-400 w-full md:w-auto"
+            >
+              <Link to="/reanalysis" className="flex items-center w-full">
+                Reanalysis
+              </Link>
+              <FaCaretDown className="ml-1" />
             </button>
             {openDropdown === 'reanalysis' && (
               <ul className="bg-black mt-1 p-4 space-y-2 w-full md:w-48 md:absolute md:bg-black md:p-4 md:space-y-2">
@@ -96,8 +115,14 @@ const Navbar = () => {
 
           {/* Mission Support */}
           <li className="relative">
-            <button onClick={() => toggleDropdown('mission')} className="flex items-center hover:text-blue-400 w-full md:w-auto">
-              Mission Support <FaCaretDown className="ml-1" />
+            <button 
+              onClick={() => toggleDropdown('mission')}
+              className="flex items-center hover:text-blue-400 w-full md:w-auto"
+            >
+              <Link to="/mission-support" className="flex items-center w-full">
+                Mission Support
+              </Link>
+              <FaCaretDown className="ml-1" />
             </button>
             {openDropdown === 'mission' && (
               <ul className="bg-black mt-1 p-4 space-y-2 w-full md:w-48 md:absolute md:bg-black md:p-4 md:space-y-2">

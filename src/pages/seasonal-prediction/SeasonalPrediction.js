@@ -9,39 +9,23 @@ const Home = () => {
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/seasonal-prediction/datagrams'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Weather Maps',
+      title: 'Surface Concentrations',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/seasonal-prediction/surface-concentrations'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Seasonal Prediction',
+      title: 'Total Columns',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
-    },
-    {
-      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Reanalysis',
-      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
-      items: [
-      ],
-      link: '/weather-forecasts/weather-maps'
-    },
-    {
-      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Mission Support',
-      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
-      items: [
-      ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/seasonal-prediction/total-columns'
     },
   ];
 
