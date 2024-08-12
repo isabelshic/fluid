@@ -1,47 +1,63 @@
 import React from 'react';
-import GraphCard from '../components/GraphCard';
+import GraphCard from '../../components/GraphCard';
 
 const Home = () => {
   const graphData = [
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Datagrams',
+      title: 'ARCSIX',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/mission-support/ARCSIX'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Weather Maps',
+      title: 'BLUEFLUX',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/mission-support/BLUEFLUX'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Seasonal Prediction',
+      title: 'PACE-PAX',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/mission-support/PACE-PAX'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Reanalysis',
+      title: 'SARP',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/mission-support/SARP'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Mission Support',
+      title: 'SARP-EAST',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
       ],
-      link: '/weather-forecasts/weather-maps'
+      link: '/mission-support/SARP-EAST'
+    },
+    {
+      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
+      title: 'SARP-WEST',
+      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
+      items: [
+      ],
+      link: '/mission-support/SARP-WEST'
+    },
+    {
+      image: `${process.env.PUBLIC_URL}/assets/graph.png`,
+      title: 'SCOAPE-II',
+      description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
+      items: [
+      ],
+      link: '/mission-support/SCOAPE-II'
     },
   ];
 
@@ -55,7 +71,7 @@ const Home = () => {
         <nav className="mb-4">
           <a href="/" className="text-blue-600 underline">&lt; Home</a>
         </nav>
-        <h2 className="text-2xl font-bold mb-4">Weather Analyses and Forecasts</h2>
+        <h2 className="text-2xl font-bold mb-4">Mission Support</h2>
         <p className="text-lg mb-8 max-w-3xl">
           The Goddard Earth Observing System (GEOS) model is designed to study various Earth Science questions by connecting different model components flexibly.
         </p>
