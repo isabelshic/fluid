@@ -51,9 +51,6 @@ To start using the FLUID tool, follow these steps:
    # For Node.js projects
    npm start
 
-   # For Python projects
-   python app.py
-   ```
 2. **Open your browser and navigate to:**
    ```
    http://localhost:3000
