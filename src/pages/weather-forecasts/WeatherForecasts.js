@@ -1,68 +1,47 @@
 import React from 'react';
-import GraphCard from '../components/GraphCard';
+import GraphCard from '../../components/GraphCard';
 
 const Home = () => {
   const graphData = [
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Weather Forecasts',
+      title: 'Datagrams',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
-        'Datagrams',
-        'WxMaps',
-        'Observing System Statistics',
-        'Radiance Monitoring',
-        'Observation Impacts',
       ],
-      link: '/weather-forecasts'
+      link: '/weather-forecasts/weather-maps'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
-      title: 'Aerosol & Gas Forecasts',
+      title: 'Weather Maps',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
-        'Forward Processing (FP)',
-        'Composition Forecast (CF)',
       ],
-      link: '/aerosol-gas'
+      link: '/weather-forecasts/weather-maps'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
       title: 'Seasonal Prediction',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
-        'Datagrams',
-        'Surface Concentrations',
-        'Total Columns',
       ],
-      link: '/seasonal-prediction'
+      link: '/weather-forecasts/weather-maps'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
       title: 'Reanalysis',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
-        'Anomalies',
-        'Chem Maps',
-        'Climate Statistics',
-        'Weather Maps',     
       ],
-      link: '/reanalysis'
+      link: '/weather-forecasts/weather-maps'
     },
     {
       image: `${process.env.PUBLIC_URL}/assets/graph.png`,
       title: 'Mission Support',
       description: 'The Goddard Earth Observing System model is designed to study various Earth Science questions.',
       items: [
-        'ARCSIX',
-        'BLUEFLUX',
-        'PACE-PAX',
-        'SARP',
-        'SARP-EAST',
-        'SARP-WEST',
-        'SCOAPE-II',
       ],
-      link: '/mission-support'
+      link: '/weather-forecasts/weather-maps'
     },
   ];
 
@@ -71,28 +50,12 @@ const Home = () => {
   return ( 
     <div className="relative w-full"> 
 
-      {/* HERO SECTION */}
-      <div 
-        className="relative h-50 bg-cover bg-center"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-32">
-          <h1 className="text-white text-4xl font-semibold mb-8">What is FLUID?</h1>
-          <p className="text-white text-lg mb-16 max-w-3xl">
-            The Global Modeling and Assimilation Office (GMAO) Framework for Live User-Invoked Data (FLUID) is a powerful tool designed to make it easier to analyze and visualize climate data. FLUID offers interactive applications that support the GMAO mission by providing quick and intuitive access to experimental and climatological data.
-          </p>
-          <div className="flex space-x-4">
-            <a href="#" className="bg-blue-600 text-white px-5 py-1 rounded-sm text-base font-normal hover:bg-blue-500">Learn more</a>
-            <a href="#" className="text-white px-5 py-1 rounded-sm text-base font-normal border border-white hover:bg-white hover:text-black">How to use FLUID →</a>
-          </div>
-        </div>
-      </div>
-      {/* END HERO SECTION */}
-
       {/* AVAILABLE GRAPHS SECTION */}
       <div className="container mx-auto py-16">
-        <h2 className="text-2xl font-bold mb-4">Available Graphs</h2>
+        <nav className="mb-4">
+          <a href="/" className="text-blue-600 underline">&lt; Home</a>
+        </nav>
+        <h2 className="text-2xl font-bold mb-4">Weather Analyses and Forecasts</h2>
         <p className="text-lg mb-8 max-w-3xl">
           The Goddard Earth Observing System (GEOS) model is designed to study various Earth Science questions by connecting different model components flexibly.
         </p>
