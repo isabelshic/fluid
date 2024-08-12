@@ -11,9 +11,7 @@ Welcome to the FLUID project repository. This project is developed under NASA Go
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
+  
 ## Introduction
 
 FLUID (Framework for Live User-Invoked Data) is a tool designed to enhance the user experience of NASA Goddard's GEOS system. This project aims to provide an intuitive and user-friendly interface for managing and visualizing geophysical data.
