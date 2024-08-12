@@ -7,6 +7,8 @@ import Survey from './components/Survey';
 
 import Home from './pages/Home';
 
+import About from './pages/About'
+
 import WeatherForecasts from './pages/weather-forecasts/WeatherForecasts';
 import WeatherMaps_Weather from './pages/weather-forecasts/WeatherMaps_Weather';
 import ObservingSystemStatistics_Weather from './pages/weather-forecasts/ObservingSystemStatistics_Weather';
@@ -70,7 +72,7 @@ function App() {
               <Route path="/mission-support/SARP-EAST" element={<SARPEAST />} />
               <Route path="/mission-support/SARP-WEST" element={<SARPWEST />} />
               <Route path="/mission-support/SCOAPE-II" element={<SCOAPEII />} />
-
+          <Route path="/about" element={<About />} />
         </Routes>
         <Survey />
         <Footer />
