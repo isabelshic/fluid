@@ -54,10 +54,17 @@ const DropdownWithSearch = ({ label, options }) => {
 };
 
 const WeatherForecasts = () => {
+  
   const fields = ['Abs EPV', 'Temperature', 'Vert Velocity', 'Humidity', 'T2M', 'Vorticity', 'Wind Speed'];
   const regions = ['Africa', 'Australia', 'Global', 'Mid Atlantic', 'North America', 'North Polar', 'Pacific', 'South America', 'Seven Seas', 'South Polar'];
   const initialTimes = ['17Jul2024 00z', '17Jul2024 00z'];
   const leadHours = ['000h 17Jul2024 00z', '000h 17Jul2024 00z'];
+
+  const [selectedField, setSelectedField] = useState('');
+  const [selectedRegion, setSelectedRegion] = useState('');
+  const [selectedInitialTime, setSelectedInitialTime] = useState('');
+  const [selectedLeadHour, setSelectedLeadHour] = useState('');
+  const [graphUrl, setGraphUrl] = useState('');
 
   return (
     <div className="flex flex-col md:flex-row container mx-auto py-10 px-4">
