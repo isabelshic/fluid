@@ -24,7 +24,6 @@ const Home = () => {
       items: [],
       link: '/ozone-data'
     },
-    // Add more graph cards as needed
   ];
 
   const backgroundImage = `${process.env.PUBLIC_URL}/assets/hero-background.png`;
