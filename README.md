@@ -16,7 +16,7 @@ Welcome to the FLUID project repository. This project is developed under NASA Go
 
 ## Introduction
 
-FLUID (Flexible User Interface Design) is a tool designed to enhance the user experience of NASA Goddard's GEOS system. This project aims to provide an intuitive and user-friendly interface for managing and visualizing geophysical data.
+FLUID (Framework for Live User-Invoked Data) is a tool designed to enhance the user experience of NASA Goddard's GEOS system. This project aims to provide an intuitive and user-friendly interface for managing and visualizing geophysical data.
 
 ## Features
 
