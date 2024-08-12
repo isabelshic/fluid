@@ -48,11 +48,10 @@ const Navbar = () => {
             </button>
             {openDropdown === 'weather' && (
               <ul className="bg-black mt-1 p-4 space-y-2 w-full md:w-52 md:absolute md:bg-black md:p-4 md:space-y-2">
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">Datagrams</a></li>
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">WxMaps</a></li>
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">Observing System Statistics</a></li>
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">Radiance Monitoring</a></li>
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">Observation Impacts</a></li>
+                <li><a href="/weather-forecasts/datagrams" className="hover:text-blue-400 whitespace-nowrap">Datagrams</a></li>
+                <li><a href="/weather-forecasts/weather-maps" className="hover:text-blue-400 whitespace-nowrap">WxMaps</a></li>
+                <li><a href="/weather-forecasts/observing-system-statistics" className="hover:text-blue-400 whitespace-nowrap">Observing System Statistics</a></li>
+                <li><a href="/weather-forecasts/radiance-monitoring" className="hover:text-blue-400 whitespace-nowrap">Radiance Monitoring</a></li>
               </ul>
             )}
           </li>
@@ -71,12 +70,12 @@ const Navbar = () => {
             {openDropdown === 'aerosol' && (
               <ul className="bg-black mt-1 p-4 space-y-2 w-full md:w-64 md:absolute md:bg-black md:p-4 md:space-y-2">
                 <li className="text-gray-400 whitespace-nowrap">Forward Processing</li>
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">Datagrams (Aerograms)</a></li>
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">2D Chem (Atmospheric Composition)</a></li>
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">3D Chem (Atmospheric Composition)</a></li>
+                <li><a href="/aerosol-gas/datagrams" className="hover:text-blue-400 whitespace-nowrap">Datagrams (Aerograms)</a></li>
+                <li><a href="/aerosol-gas/chem-maps" className="hover:text-blue-400 whitespace-nowrap">2D Chem (Atmospheric Composition)</a></li>
+                <li><a href="/aerosol-gas/chem-maps" className="hover:text-blue-400 whitespace-nowrap">3D Chem (Atmospheric Composition)</a></li>
                 <li className="text-gray-400 whitespace-nowrap">Composition Forecast</li>
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">Surface Concentrations</a></li>
-                <li><a href="#" className="hover:text-blue-400 whitespace-nowrap">Total Column</a></li>
+                <li><a href="/aerosol-gas/surface-concentrations" className="hover:text-blue-400 whitespace-nowrap">Surface Concentrations</a></li>
+                <li><a href="/aerosol-gas/total-column" className="hover:text-blue-400 whitespace-nowrap">Total Column</a></li>
               </ul>
             )}
           </li>

@@ -51,7 +51,7 @@ function App() {
               <Route path="/weather-forecasts/radiance-monitoring" element={<RadianceMonitoring_Weather />} />
               <Route path="/weather-forecasts/datagrams" element={<Datagrams_Weather />} />
             <Route path="/seasonal-prediction" element={<SeasonalPrediction />} />
-              <Route path="/seasonal-prediction/meteorgrams" element={<Datagrams_Seasonal />} />
+              <Route path="/seasonal-prediction/datagrams" element={<Datagrams_Seasonal />} />
               <Route path="/seasonal-prediction/surface-concentrations" element={<SurfaceConcentrations_Seasonal />} />
               <Route path="/seasonal-prediction/total-columns" element={<TotalColumns_Seasonal />} />
             <Route path="/reanalysis" element={<Reanalysis />} />

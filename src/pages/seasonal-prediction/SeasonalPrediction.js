@@ -39,7 +39,7 @@ const Home = () => {
         <nav className="mb-4">
           <a href="/" className="text-blue-600 underline">&lt; Home</a>
         </nav>
-        <h2 className="text-2xl font-bold mb-4">Weather Analyses and Forecasts</h2>
+        <h2 className="text-2xl font-bold mb-4">Seasonal Prediction</h2>
         <p className="text-lg mb-8 max-w-3xl">
           The Goddard Earth Observing System (GEOS) model is designed to study various Earth Science questions by connecting different model components flexibly.
         </p>

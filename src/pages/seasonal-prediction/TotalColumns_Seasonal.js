@@ -83,7 +83,7 @@ const WeatherForecasts = () => {
       {/* CONTENT */}
       <main className="md:w-2/3 lg:w-3/4 p-4">
         <nav className="mb-4">
-          <a href="/weather-forecasts" className="text-blue-600 underline">&lt; Seasonal Prediction</a>
+          <a href="/seasonal-prediction" className="text-blue-600 underline">&lt; Seasonal Prediction</a>
         </nav>
         <h1 className="text-2xl font-bold mb-4">Total Columns</h1>
         <p className="text-gray-700 mb-6">
