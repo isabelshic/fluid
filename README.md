@@ -1,4 +1,4 @@
-![Fluid from Figma](https://github.com/user-attachments/assets/7578e8c6-afbc-479a-8526-3a5593fbd3cc)
+![Fluid from Figma (1)](https://github.com/user-attachments/assets/4e422bc0-510b-4de4-98ae-317e6ff34979)
 
 # FLUID Project
 
