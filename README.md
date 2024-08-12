@@ -42,10 +42,6 @@ To set up the project locally, follow these steps:
    # For Node.js projects
    npm install
 
-   # For Python projects
-   pip install -r requirements.txt
-   ```
-
 ## Usage
 
 To start using the FLUID tool, follow these steps:
