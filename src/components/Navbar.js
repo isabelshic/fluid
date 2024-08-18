@@ -30,6 +30,12 @@ const Navbar = () => {
         {/* NAVIGATION LINKS */}
         <ul className={`md:flex md:space-x-6 text-white font-helvetica text-sm ${mobileMenuOpen ? 'block' : 'hidden'}`}>
           
+          {/* Home */}
+          <li className="relative group">
+            <Link to="/" className="flex items-center hover:text-blue-400 w-full md:w-auto">
+              Home 
+            </Link>
+          </li>
           {/* Weather Forecasts */}
           <li className="relative group">
             <Link to="/weather-forecasts" className="flex items-center hover:text-blue-400 w-full md:w-auto">
