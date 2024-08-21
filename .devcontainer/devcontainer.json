@@ -1,0 +1,31 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "hostRequirements": {
+      "cpus": 4
+    },
+    "waitFor": "onCreateCommand",
+    "updateContentCommand": "pip install -r backend/requirements.txt",
+    "postCreateCommand": "",
+    "postAttachCommand": {
+      "server": "python backend/app.py "
+    },
+    "portsAttributes": {
+      "5000": {
+        "label": "Application",
+        "onAutoForward": "openPreview"
+      }
+    },
+    "customizations": {
+      "codespaces": {
+      },
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "bradlc.vscode-tailwindcss",
+          "dbaeumer.vscode-eslint"
+        ]
+      }
+    },
+    "forwardPorts": [5000]
+  }
+  
