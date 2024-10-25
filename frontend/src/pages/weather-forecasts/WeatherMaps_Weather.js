@@ -71,9 +71,14 @@ function WeatherForecasts() {
   const [data, setData] = useState({});
   const [fields, setFields] = useState({});
   const [regions, setRegions] = useState({});
-  const [levels, setLevels] = useState({});
   const [initialTimes, setInitialTimes] = useState({});
   const [leadHours, setLeadHours] = useState({});
+
+  // State for selected values
+  const [selectedField, setSelectedField] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("");
+  const [selectedInitialTime, setSelectedInitialTime] = useState("");
+  const [selectedLeadHour, setSelectedLeadHour] = useState("");
 
   useEffect(() => {
     fetch("/data.json")
@@ -85,6 +90,12 @@ function WeatherForecasts() {
         setRegions(data.regions || {});
         setInitialTimes(data.initialTimes || {});
         setLeadHours(data.leadHours || {});
+
+        // Set initial selected values from the JSON data
+        setSelectedField(data.fields?.selected || "");
+        setSelectedRegion(data.regions?.selected || "");
+        setSelectedInitialTime(data.initialTimes?.selected || "");
+        setSelectedLeadHour(data.leadHours?.selected || "");
       })
       .catch((error) => console.error("Error loading JSON:", error));
   }, []);
@@ -96,26 +107,26 @@ function WeatherForecasts() {
         <DropdownWithSearch
           label={fields.label}
           options={fields.all}
-          selectedOption={fields.selected}
-          onSelect={fields.selected} // Pass handler to update selected option
+          selectedOption={selectedField}
+          onSelect={setSelectedField} // Pass the setSelectedField function
         />
         <DropdownWithSearch
           label={regions.label}
           options={regions.all}
-          selectedOption={regions.selected}
-          onSelect={regions.selected}
+          selectedOption={selectedRegion}
+          onSelect={setSelectedRegion}
         />
         <DropdownWithSearch
           label={initialTimes.label}
           options={initialTimes.all}
-          selectedOption={initialTimes.selected}
-          onSelect={initialTimes.selected}
+          selectedOption={selectedInitialTime}
+          onSelect={setSelectedInitialTime}
         />
         <DropdownWithSearch
           label={leadHours.label}
           options={leadHours.all}
-          selectedOption={leadHours.selected}
-          onSelect={leadHours.selected}
+          selectedOption={selectedLeadHour}
+          onSelect={setSelectedLeadHour}
         />
 
         <button className="w-full bg-blue-600 text-white py-1 rounded-sm hover:bg-blue-500">
