@@ -66,7 +66,37 @@ function WeatherForecasts() {
 
       {/* CONTENT */}
       <main className="md:w-2/3 lg:w-3/4 p-4">
-        {/* Rest of your content here */}
+        <nav className="mb-4">
+          <a href="/weather-forecasts" className="text-blue-600 underline">
+            &lt; Weather Forecasts
+          </a>
+        </nav>
+        <h1 className="text-2xl font-bold mb-4">Weather Maps</h1>
+        <p className="text-gray-700 mb-6">
+          The Goddard Earth Observing System (GEOS) model is designed to study
+          various Earth Science questions by connecting different model
+          components flexibly.
+        </p>
+
+        {/* buttons */}
+        <div className="flex mb-8">
+          <select className="mr-4 px-2 py-1 border border-gray-300 rounded-sm">
+            <option>4k</option>
+            <option>5k</option>
+            <option>6k</option>
+            {/* more options here */}
+          </select>
+          <button className="bg-blue-600 text-white px-4 py-1 rounded-sm hover:bg-blue-500">
+            Download imagery
+          </button>
+        </div>
+
+        {/* graph */}
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/graph.png`}
+          alt="Weather Graph"
+          className="w-full rounded-sm border border-black"
+        />
       </main>
     </div>
   );
