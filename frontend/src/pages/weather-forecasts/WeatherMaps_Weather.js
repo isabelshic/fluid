@@ -1,11 +1,24 @@
-import React, { useState } from 'react';
-import { FaCaretDown, FaSearch } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import { FaCaretDown, FaSearch } from "react-icons/fa";
 
-const DropdownWithSearch = ({ label, options }) => {
-  const [searchTerm, setSearchTerm] = useState('');
+const DropdownWithSearch = ({
+  label = "", // Default label
+  options = [], // Default to an empty array if options are not provided
+  selectedOption = "", // Default selected option as an empty string
+  onSelect = () => {}, // Default to a no-op function if onSelect is not provided
+}) => {
+  const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
-  const filteredOptions = options.filter(option =>
+  // Reset searchTerm each time the dropdown is opened
+  const handleOpen = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
+      setSearchTerm(""); // Reset to blank when opening
+    }
+  };
+
+  const filteredOptions = options.filter((option) =>
     option.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -14,10 +27,11 @@ const DropdownWithSearch = ({ label, options }) => {
       <p className="text-base font-bold mb-2">{label}</p>
       <div className="relative">
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleOpen}
           className="w-full px-2 py-1 border border-gray-300 rounded-sm bg-white text-left flex items-center justify-between"
         >
-          <span>{searchTerm || 'Select...'}</span>
+          <span>{selectedOption || "Select..."}</span>{" "}
+          {/* Display selectedOption when closed */}
           <FaCaretDown />
         </button>
         {isOpen && (
@@ -37,8 +51,8 @@ const DropdownWithSearch = ({ label, options }) => {
                 <li
                   key={index}
                   onClick={() => {
-                    setSearchTerm(option);
-                    setIsOpen(false);
+                    onSelect(option); // Update selected option in parent
+                    setIsOpen(false); // Close dropdown
                   }}
                   className="p-2 hover:bg-gray-200 cursor-pointer"
                 >
@@ -53,27 +67,57 @@ const DropdownWithSearch = ({ label, options }) => {
   );
 };
 
-const WeatherForecasts = () => {
-  
-  const fields = ['Abs EPV', 'Temperature', 'Vert Velocity', 'Humidity', 'T2M', 'Vorticity', 'Wind Speed'];
-  const regions = ['Africa', 'Australia', 'Global', 'Mid Atlantic', 'North America', 'North Polar', 'Pacific', 'South America', 'Seven Seas', 'South Polar'];
-  const initialTimes = ['17Jul2024 00z', '17Jul2024 00z'];
-  const leadHours = ['000h 17Jul2024 00z', '000h 17Jul2024 00z'];
+function WeatherForecasts() {
+  const [data, setData] = useState({});
+  const [fields, setFields] = useState({});
+  const [regions, setRegions] = useState({});
+  const [levels, setLevels] = useState({});
+  const [initialTimes, setInitialTimes] = useState({});
+  const [leadHours, setLeadHours] = useState({});
 
-  const [selectedField, setSelectedField] = useState('');
-  const [selectedRegion, setSelectedRegion] = useState('');
-  const [selectedInitialTime, setSelectedInitialTime] = useState('');
-  const [selectedLeadHour, setSelectedLeadHour] = useState('');
-  const [graphUrl, setGraphUrl] = useState('');
+  useEffect(() => {
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Fetched data:", data);
+        setData(data);
+        setFields(data.fields || {});
+        setRegions(data.regions || {});
+        setInitialTimes(data.initialTimes || {});
+        setLeadHours(data.leadHours || {});
+      })
+      .catch((error) => console.error("Error loading JSON:", error));
+  }, []);
 
   return (
     <div className="flex flex-col md:flex-row container mx-auto py-10 px-4">
       {/* SIDE BAR */}
       <aside className="md:w-1/3 lg:w-1/4 bg-gray-100 border border-black p-4 mr-8 rounded-sm mb-6 md:mb-0">
-        <DropdownWithSearch label="Fields" options={fields} />
-        <DropdownWithSearch label="Regions" options={regions} />
-        <DropdownWithSearch label="Forecast Initial Time" options={initialTimes} />
-        <DropdownWithSearch label="Forecast Lead Hour" options={leadHours} />
+        <DropdownWithSearch
+          label={fields.label}
+          options={fields.all}
+          selectedOption={fields.selected}
+          onSelect={fields.selected} // Pass handler to update selected option
+        />
+        <DropdownWithSearch
+          label={regions.label}
+          options={regions.all}
+          selectedOption={regions.selected}
+          onSelect={regions.selected}
+        />
+        <DropdownWithSearch
+          label={initialTimes.label}
+          options={initialTimes.all}
+          selectedOption={initialTimes.selected}
+          onSelect={initialTimes.selected}
+        />
+        <DropdownWithSearch
+          label={leadHours.label}
+          options={leadHours.all}
+          selectedOption={leadHours.selected}
+          onSelect={leadHours.selected}
+        />
+
         <button className="w-full bg-blue-600 text-white py-1 rounded-sm hover:bg-blue-500">
           Generate graph
         </button>
@@ -83,11 +127,15 @@ const WeatherForecasts = () => {
       {/* CONTENT */}
       <main className="md:w-2/3 lg:w-3/4 p-4">
         <nav className="mb-4">
-          <a href="/weather-forecasts" className="text-blue-600 underline">&lt; Weather Forecasts</a>
+          <a href="/weather-forecasts" className="text-blue-600 underline">
+            &lt; Weather Forecasts
+          </a>
         </nav>
         <h1 className="text-2xl font-bold mb-4">Weather Maps</h1>
         <p className="text-gray-700 mb-6">
-          The Goddard Earth Observing System (GEOS) model is designed to study various Earth Science questions by connecting different model components flexibly.
+          The Goddard Earth Observing System (GEOS) model is designed to study
+          various Earth Science questions by connecting different model
+          components flexibly.
         </p>
 
         {/* buttons */}
@@ -104,11 +152,15 @@ const WeatherForecasts = () => {
         </div>
 
         {/* graph */}
-        <img src={`${process.env.PUBLIC_URL}/assets/graph.png`} alt="Weather Graph" className="w-full rounded-sm border border-black" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/graph.png`}
+          alt="Weather Graph"
+          className="w-full rounded-sm border border-black"
+        />
       </main>
       {/* END CONTENT */}
     </div>
   );
-};
+}
 
 export default WeatherForecasts;
