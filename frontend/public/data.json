@@ -1,0 +1,41 @@
+{
+  "fields": {
+    "label": "Fields",
+    "all": [
+      "Abs EPV",
+      "Temperature",
+      "Vert Velocity",
+      "Humidity",
+      "T2M",
+      "Vorticity",
+      "Wind Speed"
+    ],
+    "selected": "Temperature"
+  },
+  "regions": {
+    "label": "Regions",
+    "all": [
+      "Africa",
+      "Australia",
+      "Global",
+      "Mid Atlantic",
+      "North America",
+      "North Polar",
+      "Pacific",
+      "South America",
+      "Seven Seas",
+      "South Polar"
+    ],
+    "selected": "North America"
+  },
+  "initialTimes": {
+    "label": "Forecast Initial Time",
+    "all": ["17Jul2024 00z", "17Jul2024 12z"],
+    "selected": "17Jul2024 12z"
+  },
+  "leadHours": {
+    "label": "Forecast Lead Hour",
+    "all": ["000h 17Jul2024 00z", "003h 17Jul2024 03z"],
+    "selected": "000h 17Jul2024 00z"
+  }
+}
