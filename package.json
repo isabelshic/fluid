@@ -1,0 +1,15 @@
+{
+  "name": "fluid",
+  "version": "1.0.0",
+  "description": "![Fluid from Figma (1)](https://github.com/user-attachments/assets/4e422bc0-510b-4de4-98ae-317e6ff34979)",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

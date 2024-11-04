@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaCaretDown, FaSearch } from 'react-icons/fa';
+import CalendarSelect from '../../components/CalendarSelect';
 
 const DropdownWithSearch = ({ label, options }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -60,6 +61,8 @@ const WeatherForecasts = () => {
   const initialTimes = ['17Jul2024 00z', '17Jul2024 00z'];
   const leadHours = ['000h 17Jul2024 00z', '000h 17Jul2024 00z'];
 
+  const imageryQuality = ['4k', '5k', '6k'];
+
   const [selectedField, setSelectedField] = useState('');
   const [selectedRegion, setSelectedRegion] = useState('');
   const [selectedInitialTime, setSelectedInitialTime] = useState('');
@@ -70,10 +73,14 @@ const WeatherForecasts = () => {
     <div className="flex flex-col md:flex-row container mx-auto py-10 px-4">
       {/* SIDE BAR */}
       <aside className="md:w-1/3 lg:w-1/4 bg-gray-100 border border-black p-4 mr-8 rounded-sm mb-6 md:mb-0">
-        <DropdownWithSearch label="Fields" options={fields} />
-        <DropdownWithSearch label="Regions" options={regions} />
-        <DropdownWithSearch label="Forecast Initial Time" options={initialTimes} />
-        <DropdownWithSearch label="Forecast Lead Hour" options={leadHours} />
+        <DropdownWithSearch label="Single Level" options={fields} />
+        <DropdownWithSearch label="Upper Air" options={regions} />
+        <DropdownWithSearch label="Regions" options={initialTimes} />
+        <CalendarSelect
+          label="Analysis Date"
+          onSelectDate={(date) => setSelectedInitialTime(date)}
+        />
+        <DropdownWithSearch label="Analysis Time" options={leadHours} />
         <button className="w-full bg-blue-600 text-white py-1 rounded-sm hover:bg-blue-500">
           Generate graph
         </button>
