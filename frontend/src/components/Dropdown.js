@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { FaCaretDown, FaSearch } from "react-icons/fa";
-
+import { FaCaretDown } from "react-icons/fa";
 
 const Dropdown = ({
   options = [],
