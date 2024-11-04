@@ -26,7 +26,7 @@ const DropdownWithSearch = ({
 
   return (
     <div className="mb-6">
-      <p className="text-base font-bold mb-2">{label}</p>
+      <p className="text-sm font-bold mb-2">{label}</p>
       <div className="relative">
         <button
           onClick={handleOpen}

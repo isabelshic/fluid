@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaCaretDown, FaSearch } from 'react-icons/fa';
 import CalendarSelect from '../../components/CalendarSelect';
 import Dropdown from '../../components/Dropdown';
+import Toggle from '../../components/Toggle';
 
 
 const DropdownWithSearch = ({ label, options }) => {
@@ -83,6 +84,7 @@ const WeatherForecasts = () => {
           onSelectDate={(date) => setSelectedInitialTime(date)}
         />
         <DropdownWithSearch label="Analysis Time" options={leadHours} />
+        <Toggle label="Tropical Cyclone Tracks" leftLabel="Off" rightLab="On"/>
         <button className="w-full bg-blue-600 text-white py-1 rounded-sm hover:bg-blue-500">
           Generate graph
         </button>
