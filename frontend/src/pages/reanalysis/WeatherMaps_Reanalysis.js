@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FaCaretDown, FaSearch } from 'react-icons/fa';
 import CalendarSelect from '../../components/CalendarSelect';
+import Dropdown from '../../components/Dropdown';
+
 
 const DropdownWithSearch = ({ label, options }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -99,13 +101,8 @@ const WeatherForecasts = () => {
 
         {/* buttons */}
         <div className="flex mb-8">
-          <select className="mr-4 px-2 py-1 border border-gray-300 rounded-sm">
-            <option>4k</option>
-            <option>5k</option>
-            <option>6k</option>
-            {/* more options here */}
-          </select>
-          <button className="bg-blue-600 text-white px-4 py-1 rounded-sm hover:bg-blue-500">
+          <Dropdown options={imageryQuality}/>
+          <button className="bg-blue-600 text-white px-4 py-1 ml-2 rounded-sm hover:bg-blue-500">
             Download imagery
           </button>
         </div>
